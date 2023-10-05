@@ -5,7 +5,7 @@ import com.example.tmdbclient.data.model.movie.Movie
 import com.example.tmdbclient.data.repository.movie.datasource.MovieCacheDataSource
 import com.example.tmdbclient.data.repository.movie.datasource.MovieLocalDataSource
 import com.example.tmdbclient.data.repository.movie.datasource.MovieRemoteDataSource
-import com.example.tmdbclient.domain.repository.MovieRepository
+import com.example.tmdbclient.data.repository.repository.MovieRepository
 
 class MovieRepositoryImpl(
     private val movieRemoteDataSource: MovieRemoteDataSource,

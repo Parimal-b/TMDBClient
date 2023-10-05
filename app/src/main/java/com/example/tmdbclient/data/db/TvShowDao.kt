@@ -10,7 +10,7 @@ import com.example.tmdbclient.data.model.tvshow.TvShow
 interface TvShowDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveTvShows(tvShows: List<TvShow>)
+    suspend fun saveTvShows(tvShows: List<TvShow>?)
 
     @Query("DELETE FROM popular_tvShows")
     suspend fun deleteAllTvShows()
