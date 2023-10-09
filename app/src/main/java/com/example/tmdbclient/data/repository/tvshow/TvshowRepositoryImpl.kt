@@ -1,12 +1,11 @@
 package com.example.tmdbclient.data.repository.tvshow
 
 import android.util.Log
-import com.example.tmdbclient.data.model.movie.Movie
 import com.example.tmdbclient.data.model.tvshow.TvShow
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowCacheDataSource
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowLocalDataSource
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowRemoteDataSource
-import com.example.tmdbclient.data.repository.repository.TvRepository
+import com.example.tmdbclient.domain.repository.TvRepository
 
 class TvshowRepositoryImpl(
     private val tvShowRemoteDataSource: TvShowRemoteDataSource,

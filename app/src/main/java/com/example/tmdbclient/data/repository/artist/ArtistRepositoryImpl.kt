@@ -2,11 +2,10 @@ package com.example.tmdbclient.data.repository.artist
 
 import android.util.Log
 import com.example.tmdbclient.data.model.artist.Artist
-import com.example.tmdbclient.data.model.movie.Movie
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistCacheDataSource
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistLocalDataSource
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistRemoteDataSource
-import com.example.tmdbclient.data.repository.repository.ArtistRepository
+import com.example.tmdbclient.domain.repository.ArtistRepository
 
 class ArtistRepositoryImpl(
     private val artistRemoteDataSource: ArtistRemoteDataSource,

@@ -5,7 +5,7 @@ import com.example.tmdbclient.data.model.movie.Movie
 import com.example.tmdbclient.data.repository.movie.datasource.MovieCacheDataSource
 import com.example.tmdbclient.data.repository.movie.datasource.MovieLocalDataSource
 import com.example.tmdbclient.data.repository.movie.datasource.MovieRemoteDataSource
-import com.example.tmdbclient.data.repository.repository.MovieRepository
+import com.example.tmdbclient.domain.repository.MovieRepository
 
 class MovieRepositoryImpl(
     private val movieRemoteDataSource: MovieRemoteDataSource,
@@ -33,7 +33,7 @@ class MovieRepositoryImpl(
                 movieList = body.movies
             }
         }catch (exception: Exception){
-            Log.i("MYTAG",exception.toString())
+            Log.i("MYTAG",exception.message.toString())
         }
         return movieList
     }
@@ -43,7 +43,7 @@ class MovieRepositoryImpl(
         try {
             movieList = movieLocalDataSource.getMoviesFromDB()
         }catch (exception: Exception){
-            Log.i("MYTAG",exception.toString())
+            Log.i("MYTAG",exception.message.toString())
         }
         if (movieList.size>0){
             return movieList
@@ -59,7 +59,7 @@ class MovieRepositoryImpl(
         try {
             movieList = movieCacheDataSource.getMoviesFromCache()
         }catch (exception: Exception){
-            Log.i("MYTAG",exception.toString())
+            Log.i("MYTAG",exception.message.toString())
         }
         if (movieList.size>0){
             return movieList
