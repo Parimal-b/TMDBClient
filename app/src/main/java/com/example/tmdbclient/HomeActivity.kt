@@ -3,6 +3,8 @@ package com.example.tmdbclient
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.databinding.DataBindingUtil
 import com.example.tmdbclient.databinding.ActivityHomeBinding
 import com.example.tmdbclient.presentation.artist.ArtistActivity
@@ -26,5 +28,11 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, ArtistActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.update, menu)
+        return true
     }
 }
